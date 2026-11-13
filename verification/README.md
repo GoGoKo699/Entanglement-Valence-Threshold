@@ -23,3 +23,9 @@ The command prints a JSON report and exits nonzero if a checked assertion fails.
 Orientation multiplicities and the positivity certificates use exact integers. Entropies and sector spectra use double precision, with explicit tolerances in [verify.py](verify.py). This is not an interval-arithmetic certificate for printed decimal entropies or for the approximate additional-noise threshold.
 
 The arbitrary-size claims follow from the written [degree-three](../science/degree_three.md), [degree-four](../science/degree_four.md) and [robustness](../science/robustness.md) proofs. Small graph enumeration cannot establish a thermodynamic limit, an efficient distillation circuit, a separated-node network rate or a physical implementation. The finite complete bipartite examples have short cycles and are not evidence for local tree likeness.
+
+## Hosted mathematical review
+
+The [hosted mathematics workflow](../.github/workflows/hosted-math.yml) runs only for same-repository pull requests, with read-only contents permission and the exact proposed commit checked out without persisted credentials. Its pinned Playwright and MathJax runtime first probes the README, then compares every tracked Markdown page at widths 1440 and 760 once the learning route is present.
+
+The utilities in [hosted_math](hosted_math/) inventory the pinned source, compare the actual hosted MathML with compiled source structure, and retain HTML, screenshots and a report as workflow artifacts. A passing structural report still requires inspection of the actual screenshots and scientific wording. It does not certify future renderer behavior or establish scientific correctness. Workflow artifacts have limited retention; they are reproducible review evidence rather than the scientific source.

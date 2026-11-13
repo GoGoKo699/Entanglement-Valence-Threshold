@@ -6,6 +6,8 @@ Model: a simple bipartite graph with distinct labeled endpoint modes. Physical r
 
 Story route: README.md -> science/README.md -> science/model.md -> science/entropy_identity.md -> science/degree_three.md -> science/degree_four.md -> science/interpretation.md.
 
+Learning route: learning/README.md -> learning/bridge.md -> learning/milestones.md. One educational anchor: Bartlett–Rudolph–Spekkens, Reference frames, superselection rules, and quantum information (2007), arXiv:quant-ph/0610030v3. The project-defined map has exactly 30 milestones: 14 background/preliminaries and 16 narrative/innovation, each with question, understanding target, dependencies, conceptual connection and source pointers. The bridge supplies a full four-cycle worked example and separates the source's foundations from the graph-specific results.
+
 Theorem routes:
 - Exact ideal E_D=E_F=m-H(D), locally readable orientation fibers, one-batch expected integer Bell yield: science/entropy_identity.md.
 - Finite b_L bound, critical branching recursion, maximum degree three and ordered locally-tree-like limit: science/degree_three.md.

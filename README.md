@@ -48,6 +48,12 @@ Start with the [scientific overview](science/README.md), or use a direct route.
 
 [The LLM reading guide](llms.txt) maps questions to the same authoritative sources.
 
+## Learn the project
+
+The single educational anchor is **Bartlett, Rudolph and Spekkens, _Reference frames, superselection rules, and quantum information_ (2007)**, using [arXiv:quant-ph/0610030v3](https://arxiv.org/abs/quant-ph/0610030v3). The [source bridge](learning/bridge.md) selects the relevant phase-reference and number-sector sections, translates their notation and works through every orientation of a four-cycle before connecting to the graph-density proofs.
+
+The [30-milestone map](learning/milestones.md) has 14 background/preliminaries targets and 16 narrative/innovation targets. It joins local modes and phase noise to the complete density statement, including the graph bounds, error margins and operational limits. Start with the [learning overview](learning/README.md) for a guided route; the scientific pages remain the authoritative proofs.
+
 ## Reproduce the finite checks
 
 From the repository root, with Python 3.12:
