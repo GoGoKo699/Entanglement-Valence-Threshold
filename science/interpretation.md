@@ -29,7 +29,7 @@ Both regular families begin with extensive ideal bond entanglement, but their re
 
 The inaccessible environment effectively receives the vector of vertex occupations $`D`$. The initial orientation label contains $`m`$ fair bits; the surviving ideal entanglement is the uncertainty $`m-H(D)`$ left after that record.
 
-Adding the separate entropies of vertex charges is too coarse to prove the four-link result: $`H(\operatorname{Bin}(4,1/2))>2`$. Neighboring charges are correlated because they share one edge, which contributes to exactly one endpoint. The spanning-tree mutual-information correction lowers the record-entropy bound enough to prove positive density. At degree five and above, a simpler marginal-entropy estimate can already be informative; reaching four is the relevant boundary here.
+Adding the separate entropies of vertex charges is too coarse to prove the four-link result: $`H(\mathrm{Bin}(4,1/2))>2`$. Neighboring charges are correlated because they share one edge, which contributes to exactly one endpoint. The spanning-tree mutual-information correction lowers the record-entropy bound enough to prove positive density. At degree five and above, a simpler marginal-entropy estimate can already be informative; reaching four is the relevant boundary here.
 
 ## Recovery operations and batch order
 

@@ -67,12 +67,12 @@ This inequality does not assume that the variables form a tree Markov chain. The
 At a four-valent vertex, the four incident orientation bits are independent and fair. Therefore
 
 ```math
-D_v\sim\operatorname{Bin}(4,1/2),\qquad
+D_v\sim\mathrm{Bin}(4,1/2),\qquad
 H_4:=H(D_v)=\frac{21}{8}-\frac{3}{8}\log_2 3
                   =2.030639062230\ldots.
 ```
 
-For adjacent vertices $`u,v`$, their only common incident edge is $`uv`$, because the graph is simple. Let $`X`$ indicate that this edge points toward $`u`$. The other three incident edges at each endpoint contribute independent variables $`A_0,B_0\sim\operatorname{Bin}(3,1/2)`$, independent also of $`X\sim\operatorname{Bernoulli}(1/2)`$. Thus
+For adjacent vertices $`u,v`$, their only common incident edge is $`uv`$, because the graph is simple. Let $`X`$ indicate that this edge points toward $`u`$. The other three incident edges at each endpoint contribute independent variables $`A_0,B_0\sim\mathrm{Bin}(3,1/2)`$, independent also of $`X\sim\mathrm{Bernoulli}(1/2)`$. Thus
 
 ```math
 (D_u,D_v)=(A_0+X,\ B_0+1-X).

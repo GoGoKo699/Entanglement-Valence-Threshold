@@ -159,7 +159,7 @@ The remaining steps are specific additions of the graph account:
 | Certify degree-four density | How much joint charge entropy can a spanning tree remove? | [Exact neighboring-charge distribution and entropy bound](../science/degree_four.md) |
 | Add independent phase errors | What entropy is introduced before charge pinching? | [Maximally correlated distillation and the error bound](../science/robustness.md#independent-edge-phase-flips) |
 
-At maximum degree three, the nonroot continuation has offspring law $`\operatorname{Bin}(2,1/2)`$. Its critical survival probability decays to zero. This makes the fraction of edges that can participate in coherent cycle changes vanish on locally tree-like sequences. The proof takes graph size to infinity at fixed neighborhood radius, then increases that radius.
+At maximum degree three, the nonroot continuation has offspring law $`\mathrm{Bin}(2,1/2)`$. Its critical survival probability decays to zero. This makes the fraction of edges that can participate in coherent cycle changes vanish on locally tree-like sequences. The proof takes graph size to infinity at fixed neighborhood radius, then increases that radius.
 
 At degree four, the project uses an exact two-vertex charge law and an entropy inequality to obtain
 
