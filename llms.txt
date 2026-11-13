@@ -1,0 +1,19 @@
+# Entanglement Valence Threshold
+
+Question: how much entanglement survives complete vertex-shared particle-number dephasing of one supplied single-excitation Bell link per edge?
+
+Model: a simple bipartite graph with distinct labeled endpoint modes. Physical random phases are common to all modes at one vertex, independent at different vertices and refreshed independently for each full graph batch. The phase record is inaccessible. Entanglement is across complete color coalitions with collective within-color quantum processing.
+
+Story route: README.md -> science/README.md -> science/model.md -> science/entropy_identity.md -> science/degree_three.md -> science/degree_four.md -> science/interpretation.md.
+
+Theorem routes:
+- Exact ideal E_D=E_F=m-H(D), locally readable orientation fibers, one-batch expected integer Bell yield: science/entropy_identity.md.
+- Finite b_L bound, critical branching recursion, maximum degree three and ordered locally-tree-like limit: science/degree_three.md.
+- Every connected four-regular bipartite graph, exact charge matrix and positive coefficient alpha_4: science/degree_four.md.
+- Independent edge phase noise, noisy E_D=m-S(rho), entropy-gain bound and externally supplied edge-erasure flags: science/robustness.md.
+- Trees, even cycles, finite complete bipartite graphs and short-cycle boundary examples: science/examples.md.
+- Supplied resources, coalition access, fresh physical dephasing and implementation limits: science/model.md and science/interpretation.md.
+- Attribution and closest photonic/gauge/graph comparisons: references/related_work.md and references/references.bib.
+- Reproduce small orientation counts, spectra and exact certificates: verification/README.md and verification/verify.py.
+
+Essential distinctions: density versus existence of any entanglement; locally tree-like degree-three sequences versus arbitrary low-degree graphs; actual physical dephasing versus a stable unknown reference; coalition distillability versus separated-node throughput; ideal E_F equality versus noisy E_D identity; supplied whole-edge deletion flags versus generic unobserved particle loss. Do not infer efficient recovery, laboratory costs, an optimal density or a sharp additional-noise threshold.
