@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "expressions": [
+    {
+      "path": "README.md",
+      "index": 4,
+      "source_sha256": "e9f543c868ac960e21b55d1c94e333959e94a86274cfc5fd7780b6ddc7a60723",
+      "required_text": [
+        "ED",
+        "EF",
+        "H(D)"
+      ]
+    },
+    {
+      "path": "science/degree_three.md",
+      "index": 44,
+      "source_sha256": "fc9a16fc2d545239372417a1bda1a1de500e8e7c11f61c7563ac1f71af70ffa3",
+      "required_text": [
+        "0≤EG≤",
+        "bL",
+        "L+3"
+      ]
+    },
+    {
+      "path": "science/degree_four.md",
+      "index": 8,
+      "source_sha256": "9a0e390e3c9a858b970d75382dbe5515088b2d06d64b3930d7e61aee83385ae7",
+      "required_text": [
+        "ED",
+        "EF",
+        "α4N",
+        "I4"
+      ]
+    },
+    {
+      "path": "science/degree_four.md",
+      "index": 9,
+      "source_sha256": "90e9f066b4d37a10a1ffe1986a183949d32864195cf4b8af5d14c8fd71079d6b",
+      "required_text": [
+        "0.050606733711",
+        "0.019967671482",
+        "0.0199"
+      ]
+    },
+    {
+      "path": "science/entropy_identity.md",
+      "index": 11,
+      "source_sha256": "47b08a8ee95c603d0bb8c6fec45f5c1bf6968efc71c1f9c0b381abb16c77386c",
+      "required_text": [
+        "ED",
+        "EF",
+        "H(D)"
+      ]
+    },
+    {
+      "path": "science/robustness.md",
+      "index": 54,
+      "source_sha256": "c4f378f97567433112dbab4317ef82429c998e570a2837139b71d7c6f4896b4f",
+      "required_text": [
+        "α4",
+        "2p",
+        "h2(q)",
+        ">0"
+      ]
+    }
+  ]
+}

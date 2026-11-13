@@ -121,7 +121,7 @@ Let $`g(G)`$ be the length of the shortest undirected cycle, with $`g(G)=\infty`
 L=\left\lfloor\frac{g-2}{2}\right\rfloor.
 ```
 
-Then $`2L+1<g`$, so every induced radius-$`L`$ ball is a tree: any extra edge between breadth-first-tree branches inside the ball would create a cycle of length at most $`2L+1`$. Theorem 2 gives
+Then $`2L+1\lt g`$, so every induced radius-$`L`$ ball is a tree: any extra edge between breadth-first-tree branches inside the ball would create a cycle of length at most $`2L+1`$. Theorem 2 gives
 
 ```math
 E_G\le\frac{9N}{L+3}
