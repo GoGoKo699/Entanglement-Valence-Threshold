@@ -1,0 +1,100 @@
+{
+  "passed": true,
+  "constants": {
+    "H_binomial_4": 2.0306390622295662,
+    "I_adjacent_4": 0.05060673371136648,
+    "alpha_4": 0.01996767148180023,
+    "alpha_exact_rational_lower": "617/30952",
+    "alpha_exact_positive": true,
+    "q_1_over_2000_density_lower": 0.0075595528901368884,
+    "critical_branching_recurrence_checked_steps": 10000
+  },
+  "graphs": [
+    {
+      "name": "cycle_4",
+      "vertices": 4,
+      "edges": 4,
+      "charge_sectors": 15,
+      "entanglement_ebits": 0.125,
+      "entropy_identity_residual": 0.0,
+      "phase_error": 0.001,
+      "noisy_mc_entanglement": 0.1203091323042269,
+      "noisy_entropy_lower": 0.07936896905015545
+    },
+    {
+      "name": "cycle_6",
+      "vertices": 6,
+      "edges": 6,
+      "charge_sectors": 63,
+      "entanglement_ebits": 0.03125,
+      "entropy_identity_residual": 0.0,
+      "phase_error": 0.001,
+      "noisy_mc_entanglement": 0.029603300106558095,
+      "noisy_entropy_lower": -0.03719654642476683
+    },
+    {
+      "name": "cycle_8",
+      "vertices": 8,
+      "edges": 8,
+      "charge_sectors": 255,
+      "entanglement_ebits": 0.0078125,
+      "entropy_identity_residual": 0.0,
+      "phase_error": 0.001,
+      "noisy_mc_entanglement": 0.007290364217311662,
+      "noisy_entropy_lower": -0.0834495618996891
+    },
+    {
+      "name": "path_7",
+      "vertices": 7,
+      "edges": 6,
+      "charge_sectors": 64,
+      "entanglement_ebits": 0.0,
+      "entropy_identity_residual": 0.0
+    },
+    {
+      "name": "two_C4_with_bridge",
+      "vertices": 8,
+      "edges": 9,
+      "charge_sectors": 450,
+      "entanglement_ebits": 0.25,
+      "entropy_identity_residual": 0.0,
+      "phase_error": 0.001,
+      "noisy_mc_entanglement": 0.2406182646084538,
+      "noisy_entropy_lower": 0.14733018036284976
+    },
+    {
+      "name": "K3,3",
+      "vertices": 6,
+      "edges": 9,
+      "charge_sectors": 328,
+      "entanglement_ebits": 0.9025593332039837,
+      "entropy_identity_residual": 1.1102230246251565e-16,
+      "phase_error": 0.001,
+      "noisy_mc_entanglement": 0.8723048533223423,
+      "noisy_entropy_lower": 0.7998895135668335
+    },
+    {
+      "name": "K4,4",
+      "vertices": 8,
+      "edges": 16,
+      "charge_sectors": 16145,
+      "entanglement_ebits": 2.8961765438560345,
+      "entropy_identity_residual": 0.0
+    }
+  ],
+  "deletion": {
+    "graph": "K3,3",
+    "deletion_entanglement_drops": [
+      0.3477190987613753,
+      0.3477190987613753,
+      0.3477190987613753,
+      0.3477190987613753,
+      0.3477190987613753,
+      0.3477190987613753,
+      0.3477190987613753,
+      0.3477190987613753,
+      0.3477190987613753
+    ]
+  },
+  "scope": "Finite orientation enumeration and double-precision sector spectra; universal bounds require the analytical proofs. No network-local distillation or physical implementation verified."
+}
