@@ -18,6 +18,8 @@ The sector-entanglement principle is inherited; expressing it through graph orie
 
 The noisy extension uses another established result. Rains [R01, Theorem 6.2] evaluates the PPT-distillable entanglement of maximally correlated states. Combined with the LOCC hashing inequality of Devetak and Winter [DW05], it gives the ordinary distillable-entanglement formula used here. The [phase-error robustness bound](../science/robustness.md) applies this inherited formula to the dephased graph state. Equality with entanglement of formation is asserted for the ideal flagged-sector state, not for the phase-error extension in general.
 
+For an arbitrary vertex cut, the [crossing-pattern identity](../science/entropy_identity.md#entanglement-across-an-arbitrary-cut) extends the color-cut calculation to sectors with nonuniform Schmidt spectra. The one-batch Bell conversion ceiling uses Vidal's pure-state conversion theorem [V99]. [Quantum Phase Reference Routing](https://github.com/GoGoKo699/Quantum-Phase-Reference-Routing) takes the same charge-sector states as input and studies extraction at specified nodes by separate vertex operations.
+
 ## Close network and gauge-theory precedents
 
 | Prior work | Established mechanism or task | Relation to the present result |
@@ -46,6 +48,7 @@ The keys below match [references.bib](references.bib).
 - **[WV03]** H. M. Wiseman and J. A. Vaccaro, *Entanglement of Indistinguishable Particles Shared between Two Parties*, Physical Review Letters **91**, 097902 (2003). [DOI](https://doi.org/10.1103/PhysRevLett.91.097902).
 - **[SVC04]** N. Schuch, F. Verstraete, and J. I. Cirac, *Quantum entanglement theory in the presence of superselection rules*, Physical Review A **70**, 042310 (2004). [DOI](https://doi.org/10.1103/PhysRevA.70.042310).
 - **[BRS07]** S. D. Bartlett, T. Rudolph, and R. W. Spekkens, *Reference frames, superselection rules, and quantum information*, Reviews of Modern Physics **79**, 555–609 (2007). [DOI](https://doi.org/10.1103/RevModPhys.79.555).
+- **[V99]** G. Vidal, *Entanglement of Pure States for a Single Copy*, Physical Review Letters **83**, 1046–1049 (1999). [DOI](https://doi.org/10.1103/PhysRevLett.83.1046).
 - **[R01]** E. M. Rains, *A semidefinite program for distillable entanglement*, IEEE Transactions on Information Theory **47**, 2921–2933 (2001). [DOI](https://doi.org/10.1109/18.959270).
 - **[DW05]** I. Devetak and A. Winter, *Distillation of secret key and entanglement from quantum states*, Proceedings of the Royal Society A **461**, 207–235 (2005). [DOI](https://doi.org/10.1098/rspa.2004.1372).
 - **[A22]** P. Abiuso, T. Kriváchy, E.-C. Boghiu, M.-O. Renou, A. Pozas-Kerstjens, and A. Acín, *Single-photon nonlocality in quantum networks*, Physical Review Research **4**, L012041 (2022). [DOI](https://doi.org/10.1103/PhysRevResearch.4.L012041).

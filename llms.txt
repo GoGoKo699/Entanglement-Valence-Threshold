@@ -10,6 +10,8 @@ Learning route: learning/README.md -> learning/bridge.md -> learning/milestones.
 
 Theorem routes:
 - Exact ideal E_D=E_F=m-H(D), locally readable orientation fibers, one-batch expected integer Bell yield: science/entropy_identity.md.
+- Arbitrary terminal-separating cuts, conditional crossing-pattern entropy and a one-batch Vidal bound: science/entropy_identity.md#entanglement-across-an-arbitrary-cut.
+- Four-regular block-chain separation and the companion's random-graph routing results: science/interpretation.md#two-terminal-routing.
 - Finite b_L bound, critical branching recursion, maximum degree three and ordered locally-tree-like limit: science/degree_three.md.
 - Every connected four-regular bipartite graph, exact charge matrix and positive coefficient alpha_4: science/degree_four.md.
 - Independent edge phase noise, noisy E_D=m-S(rho), entropy-gain bound and externally supplied edge-erasure flags: science/robustness.md.
