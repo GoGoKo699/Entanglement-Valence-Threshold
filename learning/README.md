@@ -4,7 +4,7 @@ The selected educational anchor is Stephen D. Bartlett, Terry Rudolph and Robert
 
 The [30-milestone map](milestones.md) is a common map of the scientific story. Its targets depend on the objects and arguments in this project, and each target points to the corresponding scientific account. It is not a replacement for the proofs or a record of any reader's progress.
 
-The map allocates **14 milestones to background/preliminaries** and **16 to narrative/innovation**. The background first builds a single link and one laboratory's phase action, then combines fixed-charge encoding, bipartite operations, entropy and sparse-graph probability into the framework required by the question. The narrative starts with one orientation fiber, assembles the exact entanglement identity and the two degree bounds, and ends with errors, resource accounting and the full scope of the density statement.
+The map allocates **14 milestones to background/preliminaries** and **16 to narrative/innovation**. The background first builds a single link and one laboratory's phase action, then combines fixed-charge encoding, bipartite operations, entropy and sparse-graph probability into the framework required by the question. The narrative starts with one orientation fiber, assembles the exact entanglement identity and the two degree bounds, and ends with errors, resource accounting and the distinction between coalition distillation and two-terminal routing.
 
 | Route | Purpose |
 | --- | --- |

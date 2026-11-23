@@ -35,9 +35,29 @@ Adding the separate entropies of vertex charges is too coarse to prove the four-
 
 The entanglement cut groups all vertices of one color into one party. Quantum processing within either group is allowed. In the ideal case, locally reading the charge sectors gives a maximally entangled state of random rank $`f_D`$. One batch has an expected integer encoded Bell yield between $`E_G-1`$ and $`E_G`$. This is an expected yield, with every sector retained. A high-probability fixed yield from each growing graph is not established.
 
-The construction may need complicated joint gates, many classical outcome bits and a costly description of the charge fiber. An extensive extraction protocol with only separate vertex operations is not provided. These costs are part of a different network implementation task.
+The construction may need complicated joint gates, many classical outcome bits and a costly description of the charge fiber. The separated-vertex task below uses a different access model.
 
 For each finite graph, $`E_D`$ is the usual asymptotic distillation rate of independent copies of its already physically dephased state. Only then is graph size varied to discuss density. On the degree-three side, the proof first takes graph size to infinity at a fixed neighborhood radius and then increases that radius. Neither limit authorizes sharing one stable hidden phase across undephased input copies.
+
+## Two-terminal routing
+
+[Quantum Phase Reference Routing](https://github.com/GoGoKo699/Quantum-Phase-Reference-Routing) treats every vertex as a separate laboratory and asks for one exact, heralded, fixed-charge Bell pair at two specified vertices. The supplied state is the same as in the ideal density theorem. The [arbitrary-cut identity](entropy_identity.md#entanglement-across-an-arbitrary-cut) quantifies how much coalition entanglement lies across any terminal-separating cut. In routing, the two coalitions in that calculation are a relaxation used to bound success.
+
+Take $`L\ge2`$ blocks, each a copy of $`K_{4,4}`$. In each interior block reserve one edge for its left boundary and a vertex-disjoint edge for its right boundary. Reserve only the relevant edge in each end block. For each adjacent pair of blocks, remove the two reserved edges $`a_i b_i`$ and $`a_{i+1}b_{i+1}`$ at that boundary, where the $`a`$ vertices have one color and the $`b`$ vertices the other. Insert $`a_i b_{i+1}`$ and $`a_{i+1} b_i`$. Each block remains connected after losing those edges. The swaps preserve every degree and the bipartition, and the connecting edges make the full graph connected. The [degree-four theorem](degree_four.md) gives a lower bound on color-cut entanglement for these $`8L`$ vertices.
+
+```math
+E_D(\rho_G)\ge 8L\alpha_4-I_4.
+```
+
+Place $`u`$ in the first block and $`v`$ in the last. The cut after any block exposes exactly two crossing edges. The sum of charges on the prefix minus its number of internal edges fixes how many of the two arrows point into that prefix. If both arrows point into the prefix or both point out, this number fixes their whole crossing pattern. The sector then has Schmidt rank one across that cut, so an exact Bell pair across it is impossible. Success requires one arrow each way at every boundary. The boundaries use disjoint raw edges, so fairness and independence give
+
+```math
+P^*(G;u,v)\le 2^{-(L-1)}.
+```
+
+The same obstruction follows from Routing's [strongly connected component criterion](https://github.com/GoGoKo699/Quantum-Phase-Reference-Routing/blob/bc7172a3fe5b7077c5b39f8d171820358b891e89/science/graph.md). A boundary whose arrows all point one way separates the terminals into different components.
+
+The companion's [random four-regular graph analysis](https://github.com/GoGoKo699/Quantum-Phase-Reference-Routing/blob/main/science/degree-four-routing.md) treats two specified same-color terminals. It distinguishes the probability that a charge sector admits a successful branch from the probability of actually extracting a Bell pair. Whether the optimal success probability stays bounded away from zero as a uniformly random simple four-regular bipartite graph grows remains open.
 
 ## Which errors preserve the conclusion?
 

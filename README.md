@@ -6,6 +6,8 @@ Each edge of a simple bipartite graph supplies one single-excitation Bell state.
 
 The surviving resource has a sharp distinction between locally tree-like degree-three networks and degree-four networks. Both can start with extensive entanglement and extensively many independent undirected cycles. The existence of those cycles alone does not determine how much entanglement survives.
 
+Our sister project [**Quantum Phase Reference Routing**](https://github.com/GoGoKo699/Quantum-Phase-Reference-Routing) asks what two specified nodes can extract when every vertex operates separately. The [cut entropy identity](science/entropy_identity.md#entanglement-across-an-arbitrary-cut) connects the two tasks. A four-regular block chain retains a linear amount of coalition entanglement while its end-to-end Bell-pair success probability decays exponentially with the number of blocks. [Two-terminal routing](science/interpretation.md#two-terminal-routing)
+
 ## Principal results
 
 Let $`N`$ be the number of vertices and $`m`$ the number of edges. Orient each edge independently and fairly, and let $`D`$ be the full vertex-indegree vector. All entropies use base-two logarithms.
@@ -39,6 +41,7 @@ Start with the [scientific overview](science/README.md), or use a direct route.
 | --- | --- |
 | What is supplied, physically dephased, and allowed during recovery? | [Model and resources](science/model.md) |
 | Why does a classical orientation entropy equal entanglement? | [Exact charge-sector identity](science/entropy_identity.md) |
+| Which orientation bits determine entanglement across another cut? | [Arbitrary-cut identity](science/entropy_identity.md#entanglement-across-an-arbitrary-cut) |
 | Why does degree three lose density on locally tree-like graphs? | [Critical branching converse](science/degree_three.md) |
 | Why does every connected four-regular bipartite graph retain density? | [Spanning-tree entropy lower bound](science/degree_four.md) |
 | Which additional errors are covered? | [Robustness](science/robustness.md) |
@@ -69,7 +72,7 @@ The suite enumerates orientation fibers on small graphs, checks exact arithmetic
 
 The shared random phase at a node acts on all its incident modes. Independent complete dephasing of every individual mode would destroy the resource. Repeated batches are independently dephased; a stable unknown phase reused coherently across batches is a different model.
 
-Distillation allows collective quantum operations inside each color coalition. An efficient circuit, a separated-node extraction rate, and laboratory implementation costs are not established. The edge-loss result assumes a supplied classical record of whole-edge deletions; it does not provide a free nondestructive detector for generic photon loss. No entanglement-of-formation equality is claimed for the phase-error extension.
+The density theorem allows collective quantum operations inside each color coalition. The [separated-node analysis](science/interpretation.md#two-terminal-routing) concerns a single batch and includes every failure outcome. The edge-loss result assumes a supplied classical record of whole-edge deletions. The phase-error extension bounds distillable entanglement.
 
 ## Purpose and contact
 

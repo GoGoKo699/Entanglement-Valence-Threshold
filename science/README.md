@@ -11,5 +11,6 @@ The account proceeds from this channel to an exact entropy identity and then to 
 5. [Robustness](robustness.md) treats independent edge phase errors and externally supplied whole-edge deletion flags. It distinguishes exact identities from sufficient error margins.
 6. [Examples](examples.md) checks trees, cycles, short-cycle counterexamples and finite complete bipartite graphs.
 7. [Interpretation](interpretation.md) reconciles the density threshold, limiting order and allowed recovery operations.
+8. [Arbitrary cuts](entropy_identity.md#entanglement-across-an-arbitrary-cut) give the exact entropy for any two cooperating groups. The [routing comparison](interpretation.md#two-terminal-routing) uses this identity to bound what two specified vertices can extract.
 
 The [related-work account](../references/related_work.md) credits sector entanglement, loop activation, maximally correlated distillation, graph cycle reversal, entropy inequalities and critical branching. The proposed addition is their graph-wide density consequence for the specified physical channel. The [verification guide](../verification/README.md) gives reproducible checks and their limits.

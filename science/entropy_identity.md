@@ -96,6 +96,46 @@ E_G-1<\mathbb E[K(D)]\le E_G,
 
 The strict lower inequality follows from $`\lfloor t\rfloor>t-1`$ for every real $`t`$. When $`E_G<1`$ it is only a weak bound; the output remains nonnegative. The subset measurement can have a very large outcome alphabet, and constructing the fiber basis can be computationally costly. This proof establishes existence under the ideal coalition model. It does not establish an efficient measurement circuit or a fixed output yield in every charge sector.
 
+## Entanglement across an arbitrary cut
+
+Split the vertices into two nonempty groups $`S`$ and $`S^c`$. Each group may process all of its own endpoint modes jointly. Let $`C_S`$ record the orientations of edges crossing this cut. Its conditional entropy gives the exact entanglement of the ideal dephased state.
+
+```math
+\boxed{
+E_D^{S:S^c}(\rho_G)=E_F^{S:S^c}(\rho_G)=H(C_S\mid D).
+}
+```
+
+To see the Schmidt spectrum, fix $`D=\mathbf d`$ and a compatible crossing pattern $`c`$. Subtract the occupations contributed by the crossing edges from the charge vector on each side. The remaining constraints on internal orientations separate into one fiber for each group. Any pair of internal orientations from these fibers combines with $`c`$ to give a compatible full orientation. Write $`f^S_{\mathbf d,c}`$ and $`f^{S^c}_{\mathbf d,c}`$ for their sizes. Uniform amplitudes then give a product of the two normalized internal-fiber states, each tensored with the indicated crossing-mode occupations. Denote the resulting local vectors by $`|\psi^S_{\mathbf d,c}\rangle`$ and $`|\psi^{S^c}_{\mathbf d,c}\rangle`$.
+
+Different $`c`$ alter at least one labeled crossing mode on each side, so both sets of local vectors are orthonormal. Grouping the sector state by $`c`$ gives the Schmidt decomposition
+
+```math
+|\phi_{\mathbf d}\rangle
+ =\sum_c\sqrt{\Pr(C_S=c\mid D=\mathbf d)}\,
+ |\psi^S_{\mathbf d,c}\rangle |\psi^{S^c}_{\mathbf d,c}\rangle,
+\qquad
+\Pr(C_S=c\mid D=\mathbf d)
+ =\frac{f^S_{\mathbf d,c} f^{S^c}_{\mathbf d,c}}{f_{\mathbf d}}.
+```
+
+The charges are still nondestructive flags that each group can read and share. The pure-sector decomposition gives an upper bound on $`E_F`$, and the reported flag measurement gives the same lower bound by strong monotonicity. On independent batches, the parties sort by flag and apply ordinary pure-state entanglement concentration within each group of matching sectors. The Schmidt vectors in every such group have the required fixed vertex charges. The law of large numbers gives the average Schmidt entropy as the achievable rate, and $`E_D\le E_F`$ proves equality. Across the color cut every edge crosses, so $`C_S=X`$ and this recovers $`H(X\mid D)=m-H(D)`$. An arbitrary cut can have nonuniform sector spectra.
+
+### A one-batch terminal bound
+
+Let $`u,v`$ be specified vertices on opposite sides of the cut. Any protocol using only separate vertex operations and classical communication is also allowed under the two-group relaxation. A heralded exact Bell pair contributes one ebit across the cut, so strong monotonicity gives $`P^*(G;u,v)\le H(C_S\mid D)`$. Here $`P^*`$ is the optimal success probability on one independently dephased batch, including all failures.
+
+For a sector $`\mathbf d`$, let $`\lambda_{\max}(S,\mathbf d)=\max_c\Pr(C_S=c\mid D=\mathbf d)`$. [Vidal's single-copy conversion theorem](https://doi.org/10.1103/PhysRevLett.83.1046) gives $`\min\{1,2(1-\lambda_{\max})\}`$ as the optimal probability to turn that pure sector into one Bell pair with two-group local operations and classical communication. The successful output on the mixture is a positive sum of successful outputs from its sectors. Purity of the Bell pair requires each nonzero contribution to give that same Bell output. Taking the strongest cut bound separately in each sector gives the following ceiling.
+
+```math
+P^*(G;u,v)\le
+\sum_{\mathbf d}p_{\mathbf d}
+ \min_{S:\,u\in S,\,v\notin S}
+ \min\bigl\{1,\,2[1-\lambda_{\max}(S,\mathbf d)]\bigr\}.
+```
+
+The sectors and Schmidt weights in this bound come from the graph and its charge distribution. The orientation is a basis label and the routing protocol uses only the supplied graph, charge and local measurement records. See the [finite cut-spectrum check](../verification/README.md#arbitrary-cuts) and the [four-regular example](interpretation.md#two-terminal-routing).
+
 ## Basic checks
 
 For an empty graph, $`m=0`$ and the only fiber has size one, so $`E_G=0`$. For a forest, leaf removal reconstructs the orientation uniquely from its indegrees: a leaf's charge fixes its incident edge, after which one removes that edge and adjusts its neighbor's charge. Every fiber again has size one and the twirled state is a mixture of occupation-basis product states.

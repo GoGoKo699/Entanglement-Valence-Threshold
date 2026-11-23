@@ -82,6 +82,32 @@
       "entropy_identity_residual": 0.0
     }
   ],
+  "arbitrary_cuts": [
+    {
+      "graph": "cycle_4",
+      "cuts": 7,
+      "charge_cut_comparisons": 105,
+      "max_squared_singular_value_residual": 1.1102230246251565e-16,
+      "selected_cut": 5,
+      "selected_cut_entropy_ebits": 0.125
+    },
+    {
+      "graph": "K3,3",
+      "cuts": 31,
+      "charge_cut_comparisons": 10168,
+      "max_squared_singular_value_residual": 2.220446049250313e-16,
+      "selected_cut": 7,
+      "selected_cut_entropy_ebits": 0.9025593332039831
+    },
+    {
+      "graph": "two_C4_with_bridge",
+      "cuts": 1,
+      "charge_cut_comparisons": 450,
+      "max_squared_singular_value_residual": 0.0,
+      "selected_cut": 15,
+      "selected_cut_entropy_ebits": 0.0
+    }
+  ],
   "deletion": {
     "graph": "K3,3",
     "deletion_entanglement_drops": [

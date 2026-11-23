@@ -182,4 +182,10 @@ This certifies a small, nonzero interval of constant error rates. The noisy form
 
 The anchor explains why number sectors can preserve quantum information. The project's additional graph estimates determine whether the preserved information is extensive. Primary attribution for the ingredients and close network/gauge comparisons is collected in [related work](../references/related_work.md).
 
+## From the color cut to routing
+
+In the two-circulation sector of the worked four-cycle, any nontrivial vertex cut crosses at least one edge. The two circulations give different crossing patterns on each side. Their conditional crossing entropy is one bit, so the sector has one ebit across that cut. All other sectors contribute zero, giving $`1/8`$ ebit per batch for any such split when its two sides can cooperate internally. For a general graph, orientations that agree on the crossing edges combine independently inside the two sides after those edges contribute their charges. Counting the compatible completions gives the [conditional entropy of the crossing pattern](../science/entropy_identity.md#entanglement-across-an-arbitrary-cut).
+
+This extends the sector calculation from BRS §III.C.3 to the graph cuts. For the two-terminal task, a favorable sector across one cut still leaves the problem of extraction by separated nodes. Work through the [four-regular block chain](../science/interpretation.md#two-terminal-routing) to see how a two-edge boundary can forbid an end-to-end pair even while a large amount survives across the color cut.
+
 Continue through the [milestones](milestones.md), or return to the [scientific route](../science/README.md).

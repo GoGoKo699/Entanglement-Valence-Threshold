@@ -273,9 +273,9 @@ The sole educational anchor is [Bartlett–Rudolph–Spekkens (BRS), arXiv:quant
 
 - **Phase:** Narrative/innovation.
 - **Central question:** What does the surviving-entanglement density law establish once the state, operations, limits and errors are all stated together?
-- **Understanding target:** Give a connected account of independent physical node dephasing, the charge-fiber identity, the degree boundary, conservative error margins, coalition recovery and unpriced implementation costs.
+- **Understanding target:** Connect independent physical node dephasing, the charge-fiber identity, the degree boundary and the error margins. Derive the crossing-pattern entropy and explain how a two-edge boundary can block a Bell pair between distant vertices.
 - **Dependencies and story role:** M14–M29; integrates the full narrative and reconciles it with the original physical question.
-- **Conceptual connection:** A local symmetry-selected subspace structure becomes a global entanglement-density law through orientation ambiguity and record correlations, with every interpretation tied to the actual resource model.
-- **Source pointers:** [Science overview](../science/README.md), [Interpretation](../science/interpretation.md), [Model: Which operations and entanglement are counted?](../science/model.md#which-operations-and-entanglement-are-counted) and [Related work](../references/related_work.md); BRS §§II.B–II.C and III.C.1–III.C.3 provide the foundation summarized in the [bridge](bridge.md).
+- **Conceptual connection:** Each cut exposes a different part of the remaining orientation uncertainty. In the four-regular chain, the color cut has extensive entropy while a Bell pair between the ends must survive every two-edge boundary.
+- **Source pointers:** [Science overview](../science/README.md), [Arbitrary cuts](../science/entropy_identity.md#entanglement-across-an-arbitrary-cut), [Two-terminal routing](../science/interpretation.md#two-terminal-routing), [Recovery operations](../science/model.md#which-operations-and-entanglement-are-counted) and [Related work](../references/related_work.md). BRS §§II.B–II.C and III.C.1–III.C.3 provide the foundation summarized in the [bridge](bridge.md).
 
 Return to the [learning overview](README.md) or the [scientific account](../science/README.md).

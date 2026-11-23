@@ -47,6 +47,49 @@ def graph_record(name, n, edges, phase_error=None):
     return record
 
 
+def cut_spectrum_check(name, n, edges, sides, expected_cut, expected_entropy):
+    sectors = fibers(n, edges)
+    comparisons = 0
+    largest_residual = 0.0
+    tested_entropy = None
+    for side in sides:
+        incident_left = 0
+        incident_right = 0
+        for index, (a, b) in enumerate(edges):
+            side_a = (side >> a) & 1
+            side_b = (side >> b) & 1
+            if side_a or side_b:
+                incident_left |= 1 << index
+            if not side_a or not side_b:
+                incident_right |= 1 << index
+        crossing = incident_left & incident_right
+        entropy_weight = 0.0
+        for patterns in sectors.values():
+            # Restricted orientations index the orthogonal local occupations.
+            rows = {p: i for i, p in enumerate(sorted({x & incident_left for x in patterns}))}
+            cols = {p: i for i, p in enumerate(sorted({x & incident_right for x in patterns}))}
+            coefficient = np.zeros((len(rows), len(cols)))
+            amplitude = 1 / math.sqrt(len(patterns))
+            for x in patterns:
+                coefficient[rows[x & incident_left], cols[x & incident_right]] = amplitude
+            singular = np.linalg.svd(coefficient, compute_uv=False)
+            actual = sorted(value**2 for value in singular if value > 1e-12)
+            multiplicities = Counter(x & crossing for x in patterns)
+            expected = sorted(count / len(patterns) for count in multiplicities.values())
+            assert len(actual) == len(expected)
+            residual = max(abs(a - b) for a, b in zip(actual, expected))
+            assert residual < 1e-12
+            largest_residual = max(largest_residual, residual)
+            entropy_weight += len(patterns) * entropy(actual)
+            comparisons += 1
+        if side == expected_cut:
+            tested_entropy = entropy_weight / (1 << len(edges))
+    assert tested_entropy is not None and abs(tested_entropy - expected_entropy) < 1e-10
+    return dict(graph=name, cuts=len(sides), charge_cut_comparisons=comparisons,
+                max_squared_singular_value_residual=largest_residual,
+                selected_cut=expected_cut, selected_cut_entropy_ebits=tested_entropy)
+
+
 def constants():
     d = 4
     binomial = [math.comb(d, k) / 2**d for k in range(d+1)]
@@ -106,7 +149,17 @@ def main():
     c = constants()
     assert r['entanglement_ebits'] >= 8*c['alpha_4'] - c['I_adjacent_4']
     rows.append(r)
+    cycle_four = [(v, (v + 1) % 4) for v in range(4)]
+    arbitrary_cuts = [
+        cut_spectrum_check('cycle_4', 4, cycle_four, range(1, (1 << 4) - 1, 2),
+                           0b0101, rows[0]['entanglement_ebits']),
+        cut_spectrum_check('K3,3', 6, k33, range(1, (1 << 6) - 1, 2),
+                           0b000111, rows[-2]['entanglement_ebits']),
+        cut_spectrum_check('two_C4_with_bridge', 8, short_cycles, [0b00001111],
+                           0b00001111, 0.0),
+    ]
     print(json.dumps(dict(passed=True, constants=c, graphs=rows,
+                         arbitrary_cuts=arbitrary_cuts,
                          deletion=deletion_check(6,k33),
                          scope='Finite orientation enumeration and double-precision sector spectra; universal bounds require the analytical proofs. No network-local distillation or physical implementation verified.'), indent=2))
 

@@ -18,6 +18,10 @@ The command prints a JSON report and exits nonzero if a checked assertion fails.
 - For selected small graphs with extra phase-error probability $`q=0.001`$, the exact charge-block coefficient matrices are diagonalized. Positivity, trace one and the noisy coherent-information lower bound are checked.
 - Deleting each of the nine edges of $`K_{3,3}`$ is enumerated separately to test the one-ebit deletion bound. This calculation assumes known deleted-edge identity.
 
+## Arbitrary cuts
+
+The script assembles the pure-sector coefficient matrix in the occupation basis on both sides of a cut. Its squared singular values match the frequencies of the crossing-edge orientations within the charge sector. The script checks every nontrivial cut up to exchanging sides on $`C_4`$ and $`K_{3,3}`$, and the one-edge cut separating the two bridged four-cycles. The color cuts reproduce the existing entanglement values. The single bridge cut has zero entropy.
+
 ## Numerical and analytical boundaries
 
 Orientation multiplicities and the positivity certificates use exact integers. Entropies and sector spectra use double precision, with explicit tolerances in [verify.py](verify.py). This is not an interval-arithmetic certificate for printed decimal entropies or for the approximate additional-noise threshold.
